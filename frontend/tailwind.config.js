@@ -4,7 +4,11 @@ import daisyUIThemes from "daisyui/src/theming/themes";
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			// fontFamily: {
+			// 	body: ['"Gloria Hallelujah"', 'cursive'],
+			// },
+		},
 	},
 	plugins: [daisyui],
 
