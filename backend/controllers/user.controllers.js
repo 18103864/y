@@ -99,7 +99,7 @@ export const updateUser = async (req,res) => {
         if(!user) return res.status(404).json({message: "User not found"});
 
         if((!newPassword && currentPassword) || (!currentPassword && newPassword)){
-            return res.status(404).json({message: "Please provide both current password and new password"});
+            return res.status(404).json({error: "Please provide both current password and new password"});
         }
 
         if(currentPassword && newPassword){

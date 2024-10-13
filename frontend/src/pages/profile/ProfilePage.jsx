@@ -30,7 +30,6 @@ const ProfilePage = () => {
 
 	const {follow, isPending} = useFollow();
 
-	const queryClient = useQueryClient();
 
 	const {data: authUser} = useQuery({queryKey: ["authUser"]});
 
