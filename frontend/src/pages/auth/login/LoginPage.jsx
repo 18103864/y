@@ -6,6 +6,7 @@ import XSvg from "../../../components/svgs/X";
 import { MdOutlineMail } from "react-icons/md";
 import { MdPassword } from "react-icons/md";
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import logo from '../../../../public/logo.png'
 
 
 const LoginPage = () => {
@@ -52,12 +53,14 @@ const LoginPage = () => {
 	return (
 		<div className='max-w-screen-xl mx-auto flex h-screen'>
 			<div className='flex-1 hidden lg:flex items-center  justify-center'>
-				<XSvg className='lg:w-2/3 fill-white' />
+				<img src={logo} className="lg:w-50 fill-white" />
+				{/* <XSvg className='lg:w-2/3 fill-white' /> */}
 			</div>
 			<div className='flex-1 flex flex-col justify-center items-center'>
 				<form className='flex gap-4 flex-col' onSubmit={handleSubmit}>
-					<XSvg className='w-24 lg:hidden fill-white' />
-					<h1 className='text-4xl font-extrabold text-white'>{"Let's"} go.</h1>
+				<img src={logo} className="w-24 lg:hidden fill-white" />
+					{/* <XSvg className='w-24 lg:hidden fill-white' /> */}
+					<h1 className='text-4xl font-extrabold text-black'>{"Let's"} go.</h1>
 					<label className='input input-bordered rounded flex items-center gap-2'>
 						<MdOutlineMail />
 						<input
@@ -87,7 +90,7 @@ const LoginPage = () => {
 					{isError && <p className='text-red-500'>{error.message}</p>}
 				</form>
 				<div className='flex flex-col gap-2 mt-4'>
-					<p className='text-white text-lg'>{"Don't"} have an account?</p>
+					<p className='text-black text-lg'>{"Don't"} have an account?</p>
 					<Link to='/signup'>
 						<button className='btn rounded-full btn-primary text-white btn-outline w-full'>Sign up</button>
 					</Link>
